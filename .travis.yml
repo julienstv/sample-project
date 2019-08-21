@@ -1,6 +1,5 @@
 language: java
 before_deploy:
-  - pyenv global 2.7
   - pip install cloudsmith-cli
   - mvn help:evaluate -N -Dexpression=project.artifactId|grep -v '\['
   - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
