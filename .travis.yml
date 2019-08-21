@@ -1,9 +1,7 @@
 language: java
 before_deploy:
   - pip install --user cloudsmith-cli
-  - mvn help:evaluate -N -Dexpression=project.artifactId|grep -v '\['
-  - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
-  - export ARTIFACT_FINAL_NAME=concat($(mvn help:evaluate -N -Dexpression=project.artifactId|grep -v '\['), "-", $(mvn help:evaluate -N -Dexpression=project.version|grep -v '\['), ".jar")
+  - export ARTIFACT_FINAL_NAME="test.jar"
 deploy:
   - provider: script
   - script: cloudsmith push maven eisti-sib/sib-2019 $ARTIFACT_FINAL_NAME
