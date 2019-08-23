@@ -1,7 +1,7 @@
 language: java
 before_deploy:
   - pip install --user cloudsmith-cli
-  - export ARTIFACT_FINAL_NAME="test.jar"
+  - export ARTIFACT_FINAL_NAME="sample-project.jar"
 deploy:
   - provider: script
   - script: cloudsmith push maven eisti-sib/sib-2019 $ARTIFACT_FINAL_NAME
