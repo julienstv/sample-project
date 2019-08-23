@@ -1,10 +1,9 @@
 language: java
 before_deploy:
   - pip install --user cloudsmith-cli
-  - export ARTIFACT_FINAL_NAME="target/sample-project.jar"
 deploy:
   provider: script
   skip_cleanup: true
-  script: cloudsmith push maven eisti-sib/sib-2019 $ARTIFACT_FINAL_NAME
+  script: cloudsmith push maven eisti-sib/sib-2019 --pom-file pom.xml target/sample-project.jar
   on:
     branch: master  
