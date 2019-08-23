@@ -7,6 +7,14 @@
 	
 	<packaging>jar</packaging>
 	
+	<dependencies>
+		<dependency>
+			<groupId>org.bouche.training.sample</groupId>
+			<artifactId>common-sample</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
 	<repositories>
 		<repository>
 			<id>eisti-sib-sib-2019</id>
