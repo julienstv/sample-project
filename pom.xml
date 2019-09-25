@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 	
 	<dependencies>
-		<dependency>
+		<dependency> 
 			<groupId>org.bouche.training.sample</groupId>
 			<artifactId>common-sample</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
